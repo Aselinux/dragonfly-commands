@@ -369,7 +369,8 @@ character_action_map = {
 
 # Actions that can be used anywhere in any command.
 global_action_map = utils.combine_maps(global_key_action_map,
-                                       utils.text_map_to_action_map(symbol_map))
+                                       utils.text_map_to_action_map(symbol_map),
+									   utils.text_map_to_action_map(long_letters_map))
 
 # Actions that can be used anywhere except after a command with arbitrary
 # dictation.
