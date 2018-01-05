@@ -343,10 +343,10 @@ key_action_map = {
     "(I|eye) triple click": Function(eye_tracker.move_to_position) + Mouse("left:3"),
     "(I|eye) start drag": Function(eye_tracker.move_to_position) + Mouse("left:down"),
     "(I|eye) stop drag": Function(eye_tracker.move_to_position) + Mouse("left:up"),
-    # "scrup": Function(lambda: eye_tracker.move_to_position((0, 50))) + Mouse("scrollup:8"), 
-    # "half scrup": Function(lambda: eye_tracker.move_to_position((0, 50))) + Mouse("scrollup:4"), 
-    # "scrown": Function(lambda: eye_tracker.move_to_position((0, -50))) + Mouse("scrolldown:8"), 
-    # "half scrown": Function(lambda: eye_tracker.move_to_position((0, -50))) + Mouse("scrolldown:4"), 
+    "scrup": Function(lambda: eye_tracker.move_to_position((0, 50))) + Mouse("scrollup:8"), 
+    "half scrup": Function(lambda: eye_tracker.move_to_position((0, 50))) + Mouse("scrollup:4"), 
+    "scrown": Function(lambda: eye_tracker.move_to_position((0, -50))) + Mouse("scrolldown:8"), 
+    "half scrown": Function(lambda: eye_tracker.move_to_position((0, -50))) + Mouse("scrolldown:4"), 
     "do click": Mouse("left"),
     "do right click": Mouse("right"),
     "do middle click": Mouse("middle"),
@@ -369,9 +369,7 @@ character_action_map = {
 
 # Actions that can be used anywhere in any command.
 global_action_map = utils.combine_maps(global_key_action_map,
-                                       utils.text_map_to_action_map(symbol_map),
-									   utils.text_map_to_action_map(long_letters_map)
-									   )
+                                       utils.text_map_to_action_map(symbol_map))
 
 # Actions that can be used anywhere except after a command with arbitrary
 # dictation.
