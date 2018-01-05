@@ -48,10 +48,10 @@ from dragonfly import (
     Repeat,
     Repetition,
     RuleRef,
-    RuleWrap,
     Text,
     get_engine,
 )
+from dragonfly.grammar.elements import RuleWrap
 import dragonfly.log
 from selenium.webdriver.common.by import By
 
